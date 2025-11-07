@@ -4,7 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Model.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/myToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
 
     <TextView
         android:id="@+id/location_add_text"
@@ -22,11 +30,24 @@
         android:inputType="text"
         android:hint="Nhập vị trí"/>
 
-    <Button
-        android:id="@+id/location_get"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tìm" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/location_get"
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:text="Tìm" />
+
+        <Button
+            android:id="@+id/location_add_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Theo dõi" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/locationName"
@@ -64,4 +85,5 @@
             android:text="Forecast"
             android:textSize="16sp" />
     </ScrollView>
+
 </LinearLayout>
